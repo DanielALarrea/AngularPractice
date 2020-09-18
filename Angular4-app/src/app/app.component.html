@@ -340,6 +340,22 @@
 
 <app-new-cmp></app-new-cmp>
 
+<div> Months:
+  <select (change) = "changeMonths($event)">
+    <option *ngFor = "let i of months">{{i}}</option>
+  </select>
+</div>
+
+<div>
+  <span *ngIf = "isAvailable; then condition1 else condition2">Condition is valid</span>
+  <ng-template #condition1>Condition is valid from template</ng-template>
+  <ng-template #condition2>Condition is invalid from template</ng-template>
+</div>
+
+<button (click)="myClickFunction($event)">
+  Click me
+</button>
+
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
