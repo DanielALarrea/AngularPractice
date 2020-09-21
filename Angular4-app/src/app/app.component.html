@@ -356,6 +356,46 @@
   Click me
 </button>
 
+<div style="text-align:center">
+  <span appChangeText >Welcome to {{title}}</span>
+</div>
+
+<div style="width:100%">
+  <div style = "width:40%;float:left;border:solid 1px black;">
+    <h1>Uppercase Pipe</h1>
+    <b>{{title | uppercase}}</b><br/>
+
+    <h1>Lowercase Pipe</h1>
+    <b>{{title | lowercase}}</b><br/>
+
+    <h1>Currency Pipe</h1>
+    <b>{{6589.23 | currency:"USD"}}</b><br/>
+    <b>{{6589.23 | currency:"USD":true}}</b><br/>
+
+    <h1>Date Pipe</h1>
+    <b>{{todayDate | date:'d/M/y'}}</b><br/>
+    <b>{{todayDate | date:'shortTime'}}</b><br/>
+
+    <h1>Decimal Pipe</h1>
+    <b>{{454.78787814 | number: '3.4-4'}}</b>
+  </div>
+
+  <div style = "width:40%;float:left;border:solid 1px black;">
+    <h1>JSON Pipe</h1>
+    <b>{{jsonVal | json}}</b><br/>
+
+    <h1>Percent Pipe</h1>
+    <b>{{00.54565 | percent}}</b><br/>
+
+    <h1>Slice Pipe</h1>
+    <b>{{months | slice:2:6}}</b><br/>
+
+    <h1>Custom Pipe</h1>
+    <b>Square root of 25 is: {{25 | sqrt}}</b><br/>
+    <b>Square root of 729 is: {{729 | sqrt}}</b><br/>
+  </div>
+</div>
+
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
